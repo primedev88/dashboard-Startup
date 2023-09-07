@@ -14,8 +14,9 @@
     border-bottom-right-radius: 0px;
 }
 .main  .core-network{
+    position: relative;
     height: 930px;
-    width: 490px;
+    width: 27%;
     background-color: #F9ABAB;
 }
 .main .core-network .docker{
@@ -161,8 +162,9 @@
     cursor: pointer;
 }
 .main .ng-ran{
+    position: relative;
     height: 930px;
-    width: 360px;
+    width: 20%;
     background-color: #FEB7A1;
 }
 .ng-ran .base{
@@ -239,11 +241,16 @@
     cursor: pointer;
 }
 .main .ues{
+    position: relative;
     height: 930px;
     width: 365px;
     background-color: #C2EFFF;
 }
+.ues .ue-main{
+    padding: 10px;
+}
 .main .packet{
+    position: relative;
     height: 930px;
     width: 530px;
     background-color: #EBEAEA;

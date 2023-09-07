@@ -139,6 +139,9 @@ const Main = () => {
         <div className="head">
           UEs
         </div>
+        <div className="ue-main">
+          No devices connected
+        </div>
       </div>
       <div className="packet">
         <div className="head">
