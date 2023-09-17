@@ -79,12 +79,13 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <div className="play">
-          <div className="iconp1">
-            <PiPlayBold size='35px' color='#124867'/>
+        <div className="playing">
+          <div className="play">
+            <div className="iconp1">
+              <PiPlayBold size='35px' color='#124867'/>
+            </div>
           </div>
         </div>
-
       </div>
       <div className="ng-ran">
         <div className="head">
@@ -129,10 +130,12 @@ const Main = () => {
             </div>
           </div>
         </div>
-        <div className="play1">
-          <div className="iconp2">
-            <PiPlayBold size='35px' color='#124867'/>
-          </div>
+        <div className="playing2">
+         <div className="play1">
+           <div className="iconp2">
+             <PiPlayBold size='35px' color='#124867'/>
+           </div>
+         </div>
         </div>
       </div>
       <div className="ues">

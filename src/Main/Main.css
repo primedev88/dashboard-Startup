@@ -4,7 +4,7 @@
     flex-direction: row;
     background-color: #FBFFE9;
     min-height: 100vh;
-    width: 280vh;
+    width: 175vw;
     justify-content: space-around;
     align-items: center;
 }
@@ -15,9 +15,11 @@
 }
 .main  .core-network{
     position: relative;
-    height: 930px;
-    width: 27%;
+    height: 98.5vh;
+    width: 25vw;
     background-color: #F9ABAB;
+    display: flex;
+    flex-direction: column;
 }
 .main .core-network .docker{
     display: flex;
@@ -26,26 +28,26 @@
     justify-content: center;  
 }
 .docker .cont1{
-    height:120px;
-    margin: 20px 10px;
+    height:12vh;
+    margin: 2vh 1vw;
     padding: 5px;
     color: #202020;
-    font-size: 13px;
-    width:200px;
+    font-size: 1.5vh;
+    width:10vw;
     background-color: #F1F1F1;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
 }
 .docker .cont1 .ausf-svg{
-    margin:20px 0;
+    margin:1vh;
 }
 .docker .cont2{
     padding: 5px;
     color: #202020;
-    font-size: 13px;
-    height:120px;
-    width:200px;
-    margin: 20px 10px;
+    font-size: 1.5vh;
+    height:12vh;
+    width:10vw;
+    margin: 2vh 1vw;
     background-color: #F1F1F1;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
@@ -54,18 +56,18 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 16px;
+    margin-top: 1.5vh;
 }
 .logo-nrf .nrf-img{
-    width: 52px;
+    width: 5vh;
 }
 .docker .cont3{
     padding: 5px;
     color: #202020;
-    font-size: 13px;
-    height:120px;
-    margin: 20px 10px;
-    width:200px;
+    font-size: 1.5vh;
+    height:12vh;
+    margin: 2vh 1vw;
+    width:10vw;
     background-color: #F1F1F1;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
@@ -74,21 +76,21 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 22px;
+    margin-top: 1.5vh;
 }
 .logo-net .udm-img{
-    width: 52px;
+    width: 5vh;
 }
 .logo-net .udr-img{
-    width: 52px;
+    width: 5vh;
 }
 .docker .cont4{
     padding: 5px;
     color: #202020;
-    font-size: 13px;
-    height:120px;
-    width:200px;
-    margin: 20px 10px;
+    font-size: 1.5vh;
+    height:12vh;
+    width:10vw;
+    margin: 2vh 1vw;
     background-color: #F1F1F1;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
@@ -96,55 +98,60 @@
 .docker .cont5{
     padding: 5px;
     color: #202020;
-    font-size: 13px;
-    height:120px;
-    margin: 20px 10px;
-    width:200px;
+    font-size: 1.5vh;
+    height:12vh;
+    margin: 2vh 1vw;
+    width:10vw;
     background-color: #F1F1F1;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
 }
 .docker .cont5 .smf-svg{
-    margin:15px 0;
+    margin:1vh 0;
 }
 .docker .cont6{
     padding: 5px;
     color: #202020;
-    font-size: 13px;
-    height:120px;
-    width:200px;
-    margin: 20px 10px;
+    font-size: 1.5vh;
+    height:12vh;
+    width:10vw;
+    margin: 2vh 1vw;
     background-color: #F1F1F1;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
 }
 .docker .cont6 .amf-svg{
-    margin:18px 0;
+    margin:1.5vh 0;
 }
 .docker .cont7{
     padding: 5px;
     color: #202020;
-    font-size: 13px;
-    height:120px;
-    width:200px;
-    margin: 20px 2px;
+    font-size: 1.5vh;
+    height:12vh;
+    width:10vw;
+    margin: 2vh 1vw;
     background-color: #F1F1F1;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
 }
 .docker .cont7 .upf-svg{
-    margin:10px 0;
+    margin:1vh 0;
+}
+.playing{
+    height: 28vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .play{
-    height: 60px;
-    width: 200px;
+    height: 7vh;
+    width: 10vw;
     background-color: rgb(216, 253, 218);
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    margin: 98px 158px;
     transition: 0.2s ease;
 }
 .play .iconp1{
@@ -155,7 +162,6 @@
 }
 .play .iconp1:hover{
     scale: 1;
-
 }
 .play:hover{
     scale: 1.05;
@@ -163,8 +169,10 @@
 }
 .main .ng-ran{
     position: relative;
-    height: 930px;
-    width: 20%;
+    height: 98.5vh;
+    width: 19vw;
+    display: flex;
+    flex-direction: column;
     background-color: #FEB7A1;
 }
 .ng-ran .base{
@@ -174,62 +182,69 @@
 }
 .ng-ran .logo-base{
     display: flex;
-    margin-top: 10px;
+    margin-top: 1vh;
     flex-direction: row;
     justify-content: center;
 }
 .ng-ran .logo-base .ran-img{
-   width: 60px;
+   width: 4em;
 }
 .ng-ran .base .station1{
-    height: 100px;
-    width: 215px;
+    height: 10vh;
+    width: 12vw;
     padding: 5px;
-    font-size: 13px;
-    margin:35px 70px;
+    font-size: 1.5vh;
+    margin:2vh 3.5vw;
     background-color: white;
     border-radius: 10px;
 }
 .ng-ran .base .station2{
-    height: 100px;
-    width: 215px;
+    height: 10vh;
+    width: 12vw;
     padding: 5px;
-    font-size: 13px;
-    margin:25px 70px;
+    font-size: 1.5vh;
+    margin:2vh 3.5vw;
     background-color: white;
     border-radius: 10px;
 }
 .ng-ran .base .divider{
-    height: 5px;
-    width: 215px;
-    margin: 0 70px;
+    height: 0.5vh;
+    width: 12vw;
+    margin: 2vh 3.5vw;
     background-color: #525252;
     border-radius: 10px;
 }
 .ng-ran .base .station3{
-    height: 100px;
-    width: 215px;
+    height: 10vh;
+    width: 12vw;
     padding: 5px;
-    font-size: 13px;
-    margin:35px 70px;
+    font-size: 1.5vh;
+    margin:2vh 3.5vw;
     background-color: white;
     border-radius: 10px;
 }
 .ng-ran .base .station4{
-    height: 100px;
-    width: 215px;
+    height: 10vh;
+    width: 12vw;
     padding: 5px;
-    font-size: 13px;
-    margin:25px 70px;
+    font-size: 1.5vh;
+    margin:2vh 3.5vw;
     background-color: white;
     border-radius: 10px;
 }
+.ng-ran .playing2{
+    height: 35vh;
+    width: 19vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .ng-ran .play1{
-    height: 60px;
-    width: 200px;
+    height: 7vh;
+    width: 10vw;
+    margin-top: 2vh;
     background-color: rgb(216, 253, 218);
     border-radius: 10px;
-    margin: 92px 80px;
     transition: 0.2s ease;
     display: flex;
     flex-direction: row;
@@ -242,8 +257,8 @@
 }
 .main .ues{
     position: relative;
-    height: 930px;
-    width: 365px;
+    height: 98.5vh;
+    width: 20vw;
     background-color: #C2EFFF;
 }
 .ues .ue-main{
@@ -251,14 +266,15 @@
 }
 .main .packet{
     position: relative;
-    height: 930px;
-    width: 530px;
+    height: 98.5vh;
+    width: 30vw;
     background-color: #EBEAEA;
 }
 .main * .head{
     width: 100%;
     color: white;
-    height: 40px;
+    height: 4.5vh;
+    font-size: 1.8vh;
     background-color: #353434;
-    padding: 10px;
+    padding: 1vh;
 }
