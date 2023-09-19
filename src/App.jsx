@@ -26,7 +26,9 @@ function App() {
     <div className="App">
     {LoggedIn ?(
       <>
-        <Navigation/>
+        <div className="navigation1">
+          <Navigation/>
+        </div>
         <Main/>
       </>): (<Login/>)
       }

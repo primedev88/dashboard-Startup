@@ -1,0 +1,20 @@
+{
+    "data":[
+        {
+            "name":"station1",
+            "status":"notinitiated"
+        },
+        {
+            "name":"station2",
+            "status":"notinitiated"
+        },
+        {
+            "name":"station3",
+            "status":"notinitiated"
+        },
+        {
+            "name":"station4",
+            "status":"notinitiated"
+        }
+    ]
+}

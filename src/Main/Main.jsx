@@ -1,8 +1,26 @@
 import React from 'react'
-import { PiPlayBold } from "react-icons/pi";
+import { PiPlayBold,PiPauseBold } from "react-icons/pi";
 import Nav from '../Components/NaviconTemplate/Nav';
+import docker from '../docker.json' 
+import station from '../station.json'
 import './Main.css'
+import { useState } from "react";
 const Main = () => {
+  const [isPlaying,setIsPlaying]=useState(false);
+  const handlePlayPauseClick=()=>{
+    setIsPlaying(!isPlaying);
+  }
+  let count=0;
+  for(let i=0;i<7;i++){
+    if(docker.data[i].status=="healthy"){
+      count+=1;
+    }
+  }
+  console.log(count)
+  const [isBaseConnected,setBaseConnected]=useState(false);
+  const connectingBase=()=>{
+      setBaseConnected(!isBaseConnected);
+  }
   return (
     <div className="main">
       <div className="core-network">
@@ -10,7 +28,7 @@ const Main = () => {
           Core-Network
         </div>
         <div className="docker">
-          <div className="cont1">
+          <div className="cont1" style={{'backgroundColor':`${docker.data[0].status=="healthy"?'#02FDB6':(docker.data[0].status=="unhealthy"?'#FD0249':'#F1F1F1')}`}}>
             AUSF
             <div className="ausf-svg">
               <svg xmlns="http://www.w3.org/2000/svg" width="" height="50" viewBox="0 0 83 69" fill="none">
@@ -19,7 +37,7 @@ const Main = () => {
               </svg>
             </div>
           </div>
-          <div className="cont2">
+          <div className="cont2" style={{'backgroundColor':`${docker.data[1].status=="healthy"?'#02FDB6':(docker.data[1].status=="unhealthy"?'#FD0249':'#F1F1F1')}`}}>
             NRF
             <div className="logo-nrf">
               <img 
@@ -28,7 +46,7 @@ const Main = () => {
               className='nrf-img' />
             </div>
           </div>
-          <div className="cont3">
+          <div className="cont3" style={{'backgroundColor':`${docker.data[2].status=="healthy"?'#02FDB6':(docker.data[2].status=="unhealthy"?'#FD0249':'#F1F1F1')}`}}>
             UDM
             <div className="logo-net">
               <img 
@@ -37,7 +55,7 @@ const Main = () => {
               className='udm-img' />
             </div>
           </div>
-          <div className="cont4">
+          <div className="cont4" style={{'backgroundColor':`${docker.data[3].status=="healthy"?'#02FDB6':(docker.data[3].status=="unhealthy"?'#FD0249':'#F1F1F1')}`}}>
             UDR
             <div className="logo-net">
               <img 
@@ -46,7 +64,7 @@ const Main = () => {
               className='udr-img'/>
             </div>
           </div>
-          <div className="cont5">
+          <div className="cont5" style={{'backgroundColor':`${docker.data[4].status=="healthy"?'#02FDB6':(docker.data[4].status=="unhealthy"?'#FD0249':'#F1F1F1')}`}}>
             SMF
             <div className="smf-svg">
               <svg xmlns="http://www.w3.org/2000/svg" width="" height="45" viewBox="0 0 89 61" fill="none">
@@ -56,7 +74,7 @@ const Main = () => {
               </svg>
             </div>
           </div>
-          <div className="cont6">
+          <div className="cont6" style={{'backgroundColor':`${docker.data[5].status=="healthy"?'#02FDB6':(docker.data[5].status=="unhealthy"?'#FD0249':'#F1F1F1')}`}}>
             AMF
             <div className="amf-svg">
               <svg xmlns="http://www.w3.org/2000/svg" width="" height="40" viewBox="0 0 54 51" fill="none">
@@ -65,7 +83,7 @@ const Main = () => {
               </svg>
             </div>
           </div>
-          <div className="cont7">
+          <div className="cont7" style={{'backgroundColor':`${docker.data[6].status=="healthy"?'#02FDB6':(docker.data[6].status=="unhealthy"?'#FD0249':'#F1F1F1')}`}}>
             UPF
             <div className="upf-svg">
               <svg xmlns="http://www.w3.org/2000/svg" width="" height="60" viewBox="0 0 96 82" fill="none">
@@ -80,11 +98,16 @@ const Main = () => {
           </div>
         </div>
         <div className="playing">
-          <div className="play">
+          {isPlaying?(<button className='btn1' onClick={handlePlayPauseClick}>
             <div className="iconp1">
-              <PiPlayBold size='35px' color='#124867'/>
+              <PiPauseBold size='3vh' color='#124867'/>
             </div>
-          </div>
+          </button>):(<button className='btn2' onClick={handlePlayPauseClick}>
+            <div className="iconp2">
+              <PiPlayBold  size='3vh' color='#124867'/>
+            </div>
+          </button>)}
+          
         </div>
       </div>
       <div className="ng-ran">
@@ -92,7 +115,7 @@ const Main = () => {
           RAN/ Access Points
         </div>
         <div className="base">
-          <div className="station1">
+          <div className="station1" style={{'backgroundColor':`${station.data[0].status=="notinitiated"?'#F1F1F1':(station.data[0].status=="connected"?'#86ffa6':'#fc3e3e')}`}}>
             NG-RAN
             <div className="logo-base">
               <img 
@@ -101,7 +124,7 @@ const Main = () => {
               className="ran-img"/>
             </div>
           </div>
-          <div className="station2">
+          <div className="station2" style={{'backgroundColor':`${station.data[1].status=="notinitiated"?'#F1F1F1':(station.data[1].status=="connected"?'#86ffa6':'#fc3e3e')}`}}>
             NG-RAN
             <div className="logo-base">
               <img 
@@ -111,7 +134,7 @@ const Main = () => {
             </div>
           </div>
           <div className="divider"></div>
-          <div className="station3">
+          <div className="station3" style={{'backgroundColor':`${station.data[2].status=="notinitiated"?'#F1F1F1':(station.data[2].status=="connected"?'#86ffa6':'#fc3e3e')}`}}>
             NG-RAN
             <div className="logo-base">
               <img 
@@ -120,7 +143,7 @@ const Main = () => {
               className="ran-img"/>
             </div>
           </div>
-          <div className="station4">
+          <div className="station4" style={{'backgroundColor':`${station.data[3].status=="notinitiated"?'#F1F1F1':(station.data[3].status=="connected"?'#86ffa6':'#fc3e3e')}`}}>
             NG-RAN
             <div className="logo-base">
               <img 
@@ -131,11 +154,20 @@ const Main = () => {
           </div>
         </div>
         <div className="playing2">
-         <div className="play1">
-           <div className="iconp2">
-             <PiPlayBold size='35px' color='#124867'/>
-           </div>
-         </div>
+          {!isBaseConnected?(count==7?(<button className='btn4' onClick={connectingBase}>
+            <div className="iconp2">
+              <PiPlayBold size='3vh' color='#124867'/>
+            </div>
+          </button>):(<button className='btn5'>
+            <div className="iconp2">
+              <PiPlayBold size='3vh' color='#124867'/>
+            </div>
+          </button>)):(<button className='btn3' onClick={connectingBase}>
+            <div className="iconp2">
+              <PiPauseBold size='3vh' color='#124867'/>
+            </div>
+          </button>)
+          }
         </div>
       </div>
       <div className="ues">
@@ -154,5 +186,4 @@ const Main = () => {
     </div>
   )
 }
-
 export default Main;

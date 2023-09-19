@@ -34,7 +34,6 @@
     color: #202020;
     font-size: 1.5vh;
     width:10vw;
-    background-color: #F1F1F1;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
 }
@@ -48,7 +47,6 @@
     height:12vh;
     width:10vw;
     margin: 2vh 1vw;
-    background-color: #F1F1F1;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
 }
@@ -68,7 +66,6 @@
     height:12vh;
     margin: 2vh 1vw;
     width:10vw;
-    background-color: #F1F1F1;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
 }
@@ -91,7 +88,6 @@
     height:12vh;
     width:10vw;
     margin: 2vh 1vw;
-    background-color: #F1F1F1;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
 }
@@ -102,7 +98,6 @@
     height:12vh;
     margin: 2vh 1vw;
     width:10vw;
-    background-color: #F1F1F1;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
 }
@@ -116,7 +111,6 @@
     height:12vh;
     width:10vw;
     margin: 2vh 1vw;
-    background-color: #F1F1F1;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
 }
@@ -130,7 +124,6 @@
     height:12vh;
     width:10vw;
     margin: 2vh 1vw;
-    background-color: #F1F1F1;
     border-bottom-left-radius:10px;
     border-bottom-right-radius:10px;
 }
@@ -143,7 +136,23 @@
     justify-content: center;
     align-items: center;
 }
-.play{
+.btn1{
+    height: 7vh;
+    width: 10vw;
+    background-color: rgb(253, 230, 216);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: 0.2s ease;
+    border: 0px;
+    scale: 0.95;
+}
+.btn1:hover{
+    cursor: pointer;
+}
+.btn2{
     height: 7vh;
     width: 10vw;
     background-color: rgb(216, 253, 218);
@@ -153,18 +162,10 @@
     justify-content: center;
     border-radius: 10px;
     transition: 0.2s ease;
-}
-.play .iconp1{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.play .iconp1:hover{
-    scale: 1;
-}
-.play:hover{
+    border: 0px;
     scale: 1.05;
+}
+.btn2:hover{
     cursor: pointer;
 }
 .main .ng-ran{
@@ -239,21 +240,56 @@
     justify-content: center;
     align-items: center;
 }
-.ng-ran .play1{
+.btn3{
+    height: 7vh;
+    width: 10vw;
+    margin-top: 2vh;
+    background-color: rgb(253, 230, 216);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: 0.2s ease;
+    border: 0px;
+    scale: 0.95;
+}
+.btn3:hover{
+    cursor:pointer;
+}
+.btn4{
     height: 7vh;
     width: 10vw;
     margin-top: 2vh;
     background-color: rgb(216, 253, 218);
-    border-radius: 10px;
-    transition: 0.2s ease;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-}
-.ng-ran .play1:hover{
+    justify-content: center;
+    border-radius: 10px;
+    transition: 0.2s ease;
+    border: 0px;
     scale: 1.05;
-    cursor: pointer;
+}
+.btn4:hover{
+    cursor:pointer;
+}
+.btn5{
+    height: 7vh;
+    width: 10vw;
+    margin-top: 2vh;
+    background-color: rgb(245, 106, 106);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    transition: 0.2s ease;
+    border: 0px;
+    scale: 1.05;
+}
+.btn5:hover{
+    cursor:not-allowed;
 }
 .main .ues{
     position: relative;
@@ -267,7 +303,7 @@
 .main .packet{
     position: relative;
     height: 98.5vh;
-    width: 30vw;
+    width: 31vw;
     background-color: #EBEAEA;
 }
 .main * .head{
