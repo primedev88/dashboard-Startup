@@ -6,7 +6,7 @@
     min-height: 100vh;
     width: 175vw;
     justify-content: space-around;
-    align-items: center;
+    align-items: center
 }
 .main *{
     border-radius: 10px;
@@ -20,6 +20,27 @@
     background-color: #F9ABAB;
     display: flex;
     flex-direction: column;
+}
+button.status-docker{
+    height: 3.5vh;
+    width: 2.5vw;
+    border-radius: 4px;
+    border: 0px;
+    transition: 0.2s ease;
+    background-color: #353434;
+}
+button.status-docker:hover{
+    background-color: #5d5b5b;
+    cursor: pointer;
+}
+.head .btn-sty{
+    height: 3.5vh;
+    width: 2.5vw;
+    border-radius: 4px;
+    margin-left: 15.6vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .main .core-network .docker{
     display: flex;
@@ -176,6 +197,27 @@
     flex-direction: column;
     background-color: #FEB7A1;
 }
+button.status-base{
+    height: 3.5vh;
+    width: 2.5vw;
+    border-radius: 4px;
+    border: 0px;
+    transition: 0.2s ease;
+    background-color: #353434;
+}
+button.status-base:hover{
+    background-color: #5d5b5b;
+    cursor: pointer;
+}
+.ng-ran .head .btn-sty1{
+    height: 3.5vh;
+    width: 2.5vw;
+    border-radius: 4px;
+    margin-left: 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .ng-ran .base{
     display: flex;
     flex-direction: column;
@@ -306,11 +348,36 @@
     width: 31vw;
     background-color: #EBEAEA;
 }
+button.extend-page{
+    height: 3.5vh;
+    width: 2.5vw;
+    border-radius: 4px;
+    border: 0px;
+    transition: 0.2s ease;
+    background-color: #353434;
+}
+button.extend-page:hover{
+    background-color: #5d5b5b;
+    cursor: pointer;
+}
+.btn-lar{
+    height: 3.5vh;
+    width: 2.5vw;
+    border-radius: 4px;
+    margin-left: 15.3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .main * .head{
     width: 100%;
     color: white;
     height: 4.5vh;
     font-size: 1.8vh;
     background-color: #353434;
-    padding: 1vh;
+    display: flex;
+    padding: 0.5vh 0.5vw;
+}
+span{
+    margin-top: 0.5vh;
 }

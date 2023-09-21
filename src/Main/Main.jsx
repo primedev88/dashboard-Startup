@@ -1,11 +1,18 @@
-import React from 'react'
-import { PiPlayBold,PiPauseBold } from "react-icons/pi";
-import Nav from '../Components/NaviconTemplate/Nav';
-import docker from '../docker.json' 
-import station from '../station.json'
-import './Main.css'
+import React from 'react';
+import { PiPlayBold,PiPauseBold,PiInfoBold,PiArrowsOutSimpleBold,PiArrowsInSimpleBold} from "react-icons/pi";
+import docker from '../docker.json';
+import station from '../station.json';
+import './Main.css';
 import { useState } from "react";
+
 const Main = () => {
+  /*const openStatustab=()=>{
+    const url='http://localhost:5500/dashboard/src/Main/Dockstatus.jsx';
+    const newTab=window.open(url);
+    if (newTab) {
+      newTab.focus();
+    }
+  }*/
   const [isPlaying,setIsPlaying]=useState(false);
   const handlePlayPauseClick=()=>{
     setIsPlaying(!isPlaying);
@@ -16,7 +23,6 @@ const Main = () => {
       count+=1;
     }
   }
-  console.log(count)
   const [isBaseConnected,setBaseConnected]=useState(false);
   const connectingBase=()=>{
       setBaseConnected(!isBaseConnected);
@@ -25,7 +31,12 @@ const Main = () => {
     <div className="main">
       <div className="core-network">
         <div className="head">
-          Core-Network
+          <span>Core-Network</span>
+          <div className="btn-sty">
+           <button className='status-docker' /*{onClick={openStatustab}}*/>
+              <PiInfoBold size='2.5vh' color='#F1F1F1' />
+           </button>
+          </div>
         </div>
         <div className="docker">
           <div className="cont1" style={{'backgroundColor':`${docker.data[0].status=="healthy"?'#02FDB6':(docker.data[0].status=="unhealthy"?'#FD0249':'#F1F1F1')}`}}>
@@ -110,9 +121,15 @@ const Main = () => {
           
         </div>
       </div>
+   
       <div className="ng-ran">
         <div className="head">
-          RAN/ Access Points
+          <span>RAN/ Access Points</span>
+          <div className="btn-sty1">
+          <button className='status-base'>
+          <PiInfoBold size='2.5vh' color='#F1F1F1'/>
+          </button>
+          </div>
         </div>
         <div className="base">
           <div className="station1" style={{'backgroundColor':`${station.data[0].status=="notinitiated"?'#F1F1F1':(station.data[0].status=="connected"?'#86ffa6':'#fc3e3e')}`}}>
@@ -172,7 +189,7 @@ const Main = () => {
       </div>
       <div className="ues">
         <div className="head">
-          UEs
+          <span>UEs</span>
         </div>
         <div className="ue-main">
           No devices connected
@@ -180,7 +197,12 @@ const Main = () => {
       </div>
       <div className="packet">
         <div className="head">
-          5G Standalone Message Flow
+          <span>5G Standalone Message Flow</span>
+          <div className="btn-lar">
+          <button className='extend-page'>
+          <PiArrowsOutSimpleBold size='2.5vh' color='#F1F1F1'/>
+          </button>
+          </div>
         </div>
       </div>
     </div>

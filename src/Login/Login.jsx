@@ -1,6 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
 import './Login.css'
-import infinity from "./infinity.png";
 import { useState } from 'react';
 import { auth } from '../Firebase';
 import {createUserWithEmailAndPassword} from "firebase/auth";
