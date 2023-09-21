@@ -4,15 +4,16 @@ import docker from '../docker.json';
 import station from '../station.json';
 import './Main.css';
 import { useState } from "react";
+import Dockstatus from '../pages/Docker-status/Dockstatus.jsx';
+import ReactDOM from 'react-dom';
 
 const Main = () => {
-  /*const openStatustab=()=>{
-    const url='http://localhost:5500/dashboard/src/Main/Dockstatus.jsx';
-    const newTab=window.open(url);
-    if (newTab) {
-      newTab.focus();
-    }
-  }*/
+  const openStatustab=()=>{
+    const newTab = window.open('', '_blank');
+    newTab.document.body.innerHTML = '<div id="root"></div>';
+    // eslint-disable-next-line react/no-deprecated
+    ReactDOM.render(<Dockstatus />, newTab.document.getElementById('root'));
+  }
   const [isPlaying,setIsPlaying]=useState(false);
   const handlePlayPauseClick=()=>{
     setIsPlaying(!isPlaying);
@@ -33,7 +34,7 @@ const Main = () => {
         <div className="head">
           <span>Core-Network</span>
           <div className="btn-sty">
-           <button className='status-docker' /*{onClick={openStatustab}}*/>
+           <button className='status-docker' onClick={openStatustab}>
               <PiInfoBold size='2.5vh' color='#F1F1F1' />
            </button>
           </div>
