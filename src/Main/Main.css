@@ -151,6 +151,22 @@ button.status-docker:hover{
 .docker .cont7 .upf-svg{
     margin:1vh 0;
 }
+.docker .cont8{
+    padding: 5px;
+    color: #202020;
+    font-size: 1.5vh;
+    height:12vh;
+    width:10vw;
+    margin: 2vh 1vw;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+}
+.user{
+    display: flex;
+    padding: 1vh;
+    justify-content: center;
+    align-items: center;
+}
 .playing{
     height: 28vh;
     display: flex;

@@ -2,38 +2,43 @@
     "data":[
         {
             "id":"conatiner1",
-            "name":"ausf",
-            "status":"notConnected"
+            "name":"AUSF",
+            "status":"Not-connected"
         },
         {
             "id":"conatiner2",
-            "name":"nrf",
-            "status":"notConnected"
+            "name":"NRF",
+            "status":"Not-connected"
         },
         {
             "id":"conatiner3",
-            "name":"udm",
-            "status":"notConnected"
+            "name":"UDM",
+            "status":"Not-connected"
         },
         {
             "id":"conatiner4",
-            "name":"udr",
-            "status":"notConnected"
+            "name":"UDR",
+            "status":"Not-connected"
         },
         {
             "id":"conatiner5",
-            "name":"smf",
-            "status":"notConnected"
+            "name":"SMF",
+            "status":"Not-connected"
         },
         {
             "id":"conatiner6",
-            "name":"amf",
-            "status":"notConnected"
+            "name":"AMF",
+            "status":"Not-connected"
         },
         {
             "id":"conatiner7",
-            "name":"upf",
-            "status":"notConnected"
+            "name":"UPF",
+            "status":"Not-connected"
+        },
+        {
+            "id":"conatiner8",
+            "name":"USER",
+            "status":"Not-connected"
         }
     ]
 }

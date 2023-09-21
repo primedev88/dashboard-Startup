@@ -1,25 +1,47 @@
 import React from 'react';
-import { PiPlayBold,PiPauseBold,PiInfoBold,PiArrowsOutSimpleBold,PiArrowsInSimpleBold} from "react-icons/pi";
+import { PiPlayBold,PiPauseBold,PiInfoBold,PiArrowsOutSimpleBold,PiArrowsInSimpleBold,PiUserBold} from "react-icons/pi";
 import docker from '../docker.json';
 import station from '../station.json';
 import './Main.css';
 import { useState } from "react";
 import Dockstatus from '../pages/Docker-status/Dockstatus.jsx';
+import Basestatus from '../pages/Station-status/Basestatus.jsx';
 import ReactDOM from 'react-dom';
 
 const Main = () => {
-  const openStatustab=()=>{
+
+  const openDockStatustab=()=>{
     const newTab = window.open('', '_blank');
-    newTab.document.body.innerHTML = '<div id="root"></div>';
+    newTab.document.body.innerHTML ='<div id="root"></div>'
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = './src/pages/Docker-status/Dockstatus.css';
+    newTab.document.head.appendChild(link);
     // eslint-disable-next-line react/no-deprecated
     ReactDOM.render(<Dockstatus />, newTab.document.getElementById('root'));
   }
+
+
+  const openBaseStatustab=()=>{
+    const newTab = window.open('', '_blank');
+    newTab.document.body.innerHTML ='<div id="root"></div>'
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = './src/pages/Station-status/Basestatus.css';
+    newTab.document.head.appendChild(link);
+    // eslint-disable-next-line react/no-deprecated
+    ReactDOM.render(<Basestatus />, newTab.document.getElementById('root'));
+  }
+
+
   const [isPlaying,setIsPlaying]=useState(false);
   const handlePlayPauseClick=()=>{
     setIsPlaying(!isPlaying);
   }
   let count=0;
-  for(let i=0;i<7;i++){
+  for(let i=0;i<8;i++){
     if(docker.data[i].status=="healthy"){
       count+=1;
     }
@@ -34,7 +56,7 @@ const Main = () => {
         <div className="head">
           <span>Core-Network</span>
           <div className="btn-sty">
-           <button className='status-docker' onClick={openStatustab}>
+           <button className='status-docker' onClick={openDockStatustab}>
               <PiInfoBold size='2.5vh' color='#F1F1F1' />
            </button>
           </div>
@@ -108,6 +130,12 @@ const Main = () => {
               </svg>
             </div>
           </div>
+          <div className="cont8" style={{'backgroundColor':`${docker.data[7].status=="healthy"?'#02FDB6':(docker.data[7].status=="unhealthy"?'#FD0249':'#F1F1F1')}`}}>
+            USER
+            <div className="user">
+              <PiUserBold size='5vh' color='124867' />
+          </div>
+          </div>
         </div>
         <div className="playing">
           {isPlaying?(<button className='btn1' onClick={handlePlayPauseClick}>
@@ -127,13 +155,13 @@ const Main = () => {
         <div className="head">
           <span>RAN/ Access Points</span>
           <div className="btn-sty1">
-          <button className='status-base'>
+          <button className='status-base' onClick={openBaseStatustab}>
           <PiInfoBold size='2.5vh' color='#F1F1F1'/>
           </button>
           </div>
         </div>
         <div className="base">
-          <div className="station1" style={{'backgroundColor':`${station.data[0].status=="notinitiated"?'#F1F1F1':(station.data[0].status=="connected"?'#86ffa6':'#fc3e3e')}`}}>
+          <div className="station1" style={{'backgroundColor':`${station.data[0].status=="notinitiated"?'#F1F1F1':(station.data[0].status=="connected"?'#02FDB6':'#fc3e3e')}`}}>
             NG-RAN
             <div className="logo-base">
               <img 
@@ -142,7 +170,7 @@ const Main = () => {
               className="ran-img"/>
             </div>
           </div>
-          <div className="station2" style={{'backgroundColor':`${station.data[1].status=="notinitiated"?'#F1F1F1':(station.data[1].status=="connected"?'#86ffa6':'#fc3e3e')}`}}>
+          <div className="station2" style={{'backgroundColor':`${station.data[1].status=="notinitiated"?'#F1F1F1':(station.data[1].status=="connected"?'#02FDB6':'#fc3e3e')}`}}>
             NG-RAN
             <div className="logo-base">
               <img 
@@ -152,7 +180,7 @@ const Main = () => {
             </div>
           </div>
           <div className="divider"></div>
-          <div className="station3" style={{'backgroundColor':`${station.data[2].status=="notinitiated"?'#F1F1F1':(station.data[2].status=="connected"?'#86ffa6':'#fc3e3e')}`}}>
+          <div className="station3" style={{'backgroundColor':`${station.data[2].status=="notinitiated"?'#F1F1F1':(station.data[2].status=="connected"?'#02FDB6':'#fc3e3e')}`}}>
             NG-RAN
             <div className="logo-base">
               <img 
@@ -161,7 +189,7 @@ const Main = () => {
               className="ran-img"/>
             </div>
           </div>
-          <div className="station4" style={{'backgroundColor':`${station.data[3].status=="notinitiated"?'#F1F1F1':(station.data[3].status=="connected"?'#86ffa6':'#fc3e3e')}`}}>
+          <div className="station4" style={{'backgroundColor':`${station.data[3].status=="notinitiated"?'#F1F1F1':(station.data[3].status=="connected"?'#02FDB6':'#fc3e3e')}`}}>
             NG-RAN
             <div className="logo-base">
               <img 
@@ -172,7 +200,7 @@ const Main = () => {
           </div>
         </div>
         <div className="playing2">
-          {!isBaseConnected?(count==7?(<button className='btn4' onClick={connectingBase}>
+          {!isBaseConnected?(count==8?(<button className='btn4' onClick={connectingBase}>
             <div className="iconp2">
               <PiPlayBold size='3vh' color='#124867'/>
             </div>
